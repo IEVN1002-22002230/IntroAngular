@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="mb-3">
+                    <form>
+                        <div class="form-group pt-4">
+                            <label for="num1">Base:(Escribe solo el radio si es un Círculo)</label>
+                            <input [(ngModel)]="num1" name="num1" type="text" class="form-control" id="num1" placeholder="Ingrese base"/>
+                        </div>
+
+                        <div class="form-group pt-4">
+                            <label for="num2">Altura:(Apotema si es pentágono)</label>
+                            <input [(ngModel)]="num2" name="num2" type="text" class="form-control" id="num2" placeholder="Ingrese altura"/>
+                        </div>
+
+                        <br/>
+                        <div class="form-check">
+                            <input [(ngModel)]="operacion" name="operacion" type="radio" class="form-check-input" value="triangulo" id="triangulo"/>
+                            <label class="form-check-label" for="triangulo">
+                                Calcular área de de un triángulo
+                            </label>
+                        </div>
+                         <!--  <button (click)="sumar()" type="button" class="btn btn-primary">
+                            Sumar
+                        </button>
+                        <br/>
+                        <button (click)="multiplicar()" type="button" class="btn btn-primary">
+                            Multiplicar
+                        </button>
+                        <br/>
+                        <button (click)="restar()" type="button" class="btn btn-primary">
+                            Restar
+                        </button>
+                        <br/>
+                        <button (click)="dividir()" type="button" class="btn btn-primary">
+                            Dividir
+                        </button>
+                         -->
+
+                        <div class="form-check">
+                            <input [(ngModel)]="operacion" name="operacion" type="radio" class="form-check-input" value="rectangulo" id="rectangulo"/>
+                            <label class="form-check-label" for="rectangulo">
+                                Calcular el área de un réctangulo
+                            </label>
+
+                        </div>
+
+                        <div class="form-check">
+                            <input [(ngModel)]="operacion" name="operacion"  type="radio" class="form-check-input" value="circulo" id="circulo"/>
+                            <label class="form-check-label" for="circulo">
+                                Calcular el área de un circulo
+                            </label>
+
+                        </div>
+
+                        <div class="form-check">
+                            <input [(ngModel)]="operacion" name="operacion" type="radio" class="form-check-input" value="pentagono" id="pentagono"/>
+                            <label class="form-check-label" for="pentagono">
+                                Calcular área de un pentágono
+                            </label>
+
+                        </div>
+
+                        <br/>
+
+                        <button (click)="calcular()"  type="button" class="btn btn-primary">Calcular</button>
+
+                    </form>
+
+
+                    <div class="col-6">
+                        <h3>Resultado: {{resultado}}</h3>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

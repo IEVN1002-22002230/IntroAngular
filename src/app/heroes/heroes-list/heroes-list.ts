@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IHeroes } from '../heroes';
 
 @Component({
   selector: 'app-heroes-list',
@@ -16,34 +17,34 @@ export class HeroesList {
     this.muestraImage=!this.muestraImage
   }
 
-  heroes:any[]=[
+  heroes:IHeroes[]=[
     {
     imagen:'https://dragonball-api.com/characters/17_Artwork.webp',
     nombre:'Android 17',
     descripcion:'Lapis',
     race:'villain',
-    ki:'40000'
+    ki:40000
     },
     {
     imagen:'https://dragonball-api.com/characters/BuuGordo_Universo7.webp',
     nombre:'Majin Buu',
     descripcion:'¡Te convertiré en chocolate!',
     race:'villain',
-    ki:'100000'
+    ki:100000
     },
     {
     imagen:'https://dragonball-api.com/characters/Beerus_DBS_Broly_Artwork.webp',
     nombre:'Bills',
     descripcion:'Viene la destruccion',
     race:'other',
-    ki:'90000'
+    ki:90000
     },
     {
     imagen:'https://dragonball-api.com/characters/Marcarita.webp',
     nombre:'Marcarita',
     descripcion:'Los manuscritos no arden.',
     race:'Assistant of Vermoud',
-    ki:'99500'
+    ki:99500
     }
   ]
   

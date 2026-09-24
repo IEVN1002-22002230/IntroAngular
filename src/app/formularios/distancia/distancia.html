@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Distancia</title>
+</head>
+<body>
+     <h3>Calcula la distancia entre 2 puntos, ingresando las coordenadas</h3>
+     <h4>Punto 1</h4>
+        <div class="form-group pt-2">
+            <label for="x1">Coordenada X1:</label>
+            <input [(ngModel)]="x1" name="x1" type="text" class="form-control" id="x1" placeholder="Ingrese coordenada X1"/>
+        </div>
+        <div class="form-group pt-2">
+            <label for="y1">Coordenada Y1:</label>
+            <input [(ngModel)]="y1" name="y1" type="text" class="form-control" id="y1" placeholder="Ingrese coordenada Y1"/>
+        </div>
+    
+
+        <h4>Punto 2</h4>
+        <div class="form-group pt-2">
+            <label for="x2">Coordenada X2:</label>
+            <input [(ngModel)]="x2" name="x2" type="text" class="form-control" id="x2" placeholder="Ingrese coordenada X2"/>
+        </div>
+        <div class="form-group pt-2">
+            <label for="y2">Coordenada Y2:</label>
+            <input [(ngModel)]="y2" name="y2" type="text" class="form-control" id="y2" placeholder="Ingrese coordenada Y2"/>
+        </div>
+   
+        <div class="row mt-4">
+            <div class="col-12">
+                <button class="btn btn-primary" (click)="calcular()">Calcular Distancia</button>
+            </div>
+        </div>
+
+        <!-- Sección de Resultado -->
+        <div class="row mt-4">
+            <h3>Resultado: {{resultado}}</h3>
+        </div>
+</body>
+</html>

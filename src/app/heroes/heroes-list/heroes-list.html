@@ -20,8 +20,9 @@
             <div class="table-responsive">
                 <table class="table table-striped" *ngIf="heroes.length>0"> <!-- ngIf para validar -->
                     <thead>
+                        <button (click)="showImage()" class="btn btn-primary">{{muestraImage?'Ocultar ': 'Muestra '}}<!--enlace de evento-->Imagen</button>
                         <tr>
-                            <th><button (click)="showImage()" class="btn btn-primary">{{muestraImage?'Ocultar ': 'Muestra '}}<!--enlace de evento-->Imagen</button></th>
+                            
                             <th>Imagen</th>
                             <th>Nombre</th>
                             <th>Descripcion</th>
@@ -30,7 +31,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let heroe of heroes">
+                        <tr *ngFor="let heroe of heroes | heroesFilter:listFilter">
                             <td><img *ngIf="muestraImage" [src]="heroe.imagen"
                             [style.width.px]="imageWidth"
                             [style.margin.px]="muestraImage" /></td>
